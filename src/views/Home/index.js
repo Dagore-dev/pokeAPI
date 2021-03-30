@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 
 import PokemonContext from '../../context/pokemons/index';
+import PokemonList from "./components/PokemonList/PokemonList";
 
 const Home = () => {
     const { getPokemons , pokemons } = useContext(PokemonContext);
@@ -11,7 +12,9 @@ const Home = () => {
     },[])
 
     return(
-        <h1>Página principal</h1>
+        <>
+            <PokemonList pokemons={pokemons}/>
+        </>
     )
 }
 

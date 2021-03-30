@@ -6,6 +6,7 @@ import {
 
 import Home from '../views/Home';
 import NotFound from '../views/NotFound';
+import PokeDetail from '../views/PokeDetail';
 
 const Routes = () => {
 
@@ -13,6 +14,10 @@ const Routes = () => {
         <Router>
             <Switch>
 
+                <Route path='/pokemon/:id'>
+                    <PokeDetail />
+                </Route>
+                
                 <Route exact path='/'>
                     <Home />
                 </Route>
