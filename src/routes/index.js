@@ -3,6 +3,7 @@ import {
     Switch,
     Route
 } from 'react-router-dom';
+import ScrollToTop from '../components/useScrollToTop';
 
 import Home from '../views/Home';
 import NotFound from '../views/NotFound';
@@ -12,6 +13,9 @@ const Routes = () => {
 
     return(
         <Router>
+
+            <ScrollToTop />
+
             <Switch>
 
                 <Route path='/pokemon/:id'>

@@ -2,18 +2,21 @@ import { useContext, useEffect } from "react";
 
 import PokemonContext from '../../context/pokemons/index';
 import PokemonList from "./components/PokemonList/PokemonList";
+import Loading from "../../components/Loading";
+import ErrorMessage from '../../components/ErrorMessage';
 
 const Home = () => {
-    const { getPokemons , pokemons } = useContext(PokemonContext);
-    console.log(pokemons);
+    const { getPokemons , pokemons, isLoading, hasError, errorMsg } = useContext(PokemonContext);
     
     useEffect(() => {
-        getPokemons().catch(null);
+        getPokemons().catch(null); // eslint-disable-next-line
     },[])
+
+    if(isLoading) return <Loading title='pokemons'/>;
 
     return(
         <>
-            <PokemonList pokemons={pokemons}/>
+            {hasError ? <ErrorMessage message={errorMsg}/> : <PokemonList pokemons={pokemons}/>}
         </>
     )
 }

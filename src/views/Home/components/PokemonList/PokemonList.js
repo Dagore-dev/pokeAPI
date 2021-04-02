@@ -6,6 +6,7 @@ const PokemonList = ( { pokemons } ) => {
         <ul>
             {pokemons?.map((pokemon, index) => <PokemonListItem key={index} {...pokemon}/>)}
         </ul>
+
     )
 }
 
