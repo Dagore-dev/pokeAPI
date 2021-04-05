@@ -1,3 +1,4 @@
+import './normalize.css';
 import './App.css';
 import PokemonProvider from './context/pokemons/Provider';
 import Routes from './routes';

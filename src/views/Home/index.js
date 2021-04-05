@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 
+import './styles.css';
 import PokemonContext from '../../context/pokemons/index';
 import PokemonList from "./components/PokemonList/PokemonList";
 import Loading from "../../components/Loading";
@@ -16,6 +17,8 @@ const Home = () => {
 
     return(
         <>
+            <h1>Lista de pokemons</h1>
+
             {hasError ? <ErrorMessage message={errorMsg}/> : <PokemonList pokemons={pokemons}/>}
         </>
     )

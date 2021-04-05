@@ -1,0 +1,16 @@
+.pokemonList{
+    list-style: none;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(8, 150px);
+    grid-auto-rows: 30px;
+    
+}
+
+.pokemonList__link{
+    text-decoration: none;
+}
+
+.pokemonList__item::first-letter{
+    text-transform: uppercase;
+}

@@ -1,0 +1,17 @@
+.pokeDetail{
+    place-self: start;
+    padding: 1rem;
+}
+
+.pokeDetail__list{
+    list-style: none;
+}
+
+.pokeDetail__list li{
+    height: 30px;
+    line-height: 30px;
+}
+
+.pokeDetail__list li::first-letter{
+    text-transform: uppercase;
+}
